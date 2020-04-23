@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router,Route,Switch} from 'react-router-dom'
 
 import { Navigation, NavigationBar } from './components/NavigationBar'
-import { Home } from './Home'
+import  Home from './Home'
 import { LatestUpdate } from './LatestUpdate'
 import { Layout } from './components/Layout'
 import { JumbotronPage } from './components/JumbotronPage'
@@ -13,6 +13,19 @@ import  LeftMenu  from './components/LeftMenu';
 
 class App extends Component
 {
+  constructor(props){
+    super(props);
+    this.state={
+      covid19statsres:null
+    }
+  }
+  callBackToLoadDataSelFromLeftMenu = (dataResponse) => {
+    this.setState({
+      covid19statsres:dataResponse
+    });
+    console.log(dataResponse);
+  }
+
   render(){
     return(
     <React.Fragment>
@@ -23,11 +36,11 @@ class App extends Component
         <Container>
           <Row>
             <Col>
-              <LeftMenu />
+              <LeftMenu callBackDataFromSelMenu={this.callBackToLoadDataSelFromLeftMenu}/>
             </Col>
-            <Col>Right menu column
+            <Col>
             <Switch>
-            <Route exact path="/" component={Home}/>
+            <Home covid19Data={this.state.covid19statsres}/>
             <Route exact path="/latest" component={LatestUpdate}/>
           </Switch>
           </Col>

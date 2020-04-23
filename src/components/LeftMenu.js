@@ -8,13 +8,19 @@ export default class LeftMenu extends React.Component{
 
 constructor(props)    {
     super(props);
-    
 }
 
  handleLeftMenu = (eventKey) => {
     console.log("click event came here",eventKey);   
-    if(eventKey==1){
-        window.fetch("http://localhost:3000/learningcategories")
+    if(eventKey=='stats'){
+        //window.fetch("http://localhost:3000/learningcategories")
+        window.fetch("https://api.rootnet.in/covid19-in/stats/latest").
+        then((response)=>{
+            response.json().then(
+                jsonBody => {this.props.callBackDataFromSelMenu(jsonBody)});
+           // ;
+        });
+        
     }
 
 };
@@ -23,7 +29,7 @@ render()  {
     return <Nav defaultActiveKey="/home" className="flex-column">
                 <Nav.Link eventKey="1" onSelect={this.handleLeftMenu}>Covid awareness</Nav.Link>
                 <Nav.Link eventKey="2" onSelect={this.handleLeftMenu}>Covid Preparedness</Nav.Link>
-                <Nav.Link eventKey="link-2" onSelect={this.handleLeftMenu}>Covid Statistics</Nav.Link>
+                <Nav.Link eventKey="stats" onSelect={this.handleLeftMenu}>Covid Statistics</Nav.Link>
                 <Nav.Link eventKey="disabled" onSelect={this.handleLeftMenu} disabled>
                   Helpline #
                </Nav.Link>
