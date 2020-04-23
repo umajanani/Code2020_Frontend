@@ -3,10 +3,9 @@ import { Jumbotron,Button} from 'react-bootstrap'
 
 export const JumbotronPage = () => { return (
     <Jumbotron>
-          <h1>Hello, world!</h1>
+          <h1>Hello, There!</h1>
           <p>
-            This is a simple hero unit, a simple jumbotron-style component for calling
-            extra attention to featured content or information.
+            This is a one stop page where you can get all the information and updates related to covid-19.
           </p>
           <p>
             <Button variant="primary">Learn more</Button>

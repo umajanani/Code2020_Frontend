@@ -21,11 +21,11 @@ constructor(props)    {
 
 render()  { 
     return <Nav defaultActiveKey="/home" className="flex-column">
-                <Nav.Link eventKey="1" onSelect={this.handleLeftMenu}>Active</Nav.Link>
-                <Nav.Link eventKey="2" onSelect={this.handleLeftMenu}>Link</Nav.Link>
-                <Nav.Link eventKey="link-2" onSelect={this.handleLeftMenu}>Link</Nav.Link>
+                <Nav.Link eventKey="1" onSelect={this.handleLeftMenu}>Covid awareness</Nav.Link>
+                <Nav.Link eventKey="2" onSelect={this.handleLeftMenu}>Covid Preparedness</Nav.Link>
+                <Nav.Link eventKey="link-2" onSelect={this.handleLeftMenu}>Covid Statistics</Nav.Link>
                 <Nav.Link eventKey="disabled" onSelect={this.handleLeftMenu} disabled>
-                  Disabled
+                  Helpline #
                </Nav.Link>
               </Nav>
          }
