@@ -35,7 +35,7 @@ class App extends Component
         <JumbotronPage />
         <Container>
           <Row>
-            <Col>
+            <Col xs={2}>
               <LeftMenu callBackDataFromSelMenu={this.callBackToLoadDataSelFromLeftMenu}/>
             </Col>
             <Col>
