@@ -13,14 +13,9 @@ constructor(props)    {
  handleLeftMenu = (eventKey) => {
     console.log("click event came here",eventKey);   
     if(eventKey=='stats'){
-        //window.fetch("http://localhost:3000/learningcategories")
-        window.fetch("https://api.rootnet.in/covid19-in/stats/latest").
-        then((response)=>{
-            response.json().then(
-                jsonBody => {this.props.callBackDataFromSelMenu(jsonBody)});
-           // ;
-        });
-        
+        this.props.callBackDataFromSelMenu(1)     
+    }else if(eventKey=='browseLookBackApi'){
+            this.props.callBackDataFromSelMenu(2);
     }
 
 };
@@ -30,6 +25,7 @@ render()  {
                 <Nav.Link eventKey="disabled" onSelect={this.handleLeftMenu} disabled>Covid awareness</Nav.Link>
                 <Nav.Link eventKey="disabled" onSelect={this.handleLeftMenu} disabled>Covid Preparedness</Nav.Link>
                 <Nav.Link eventKey="stats" onSelect={this.handleLeftMenu}>Covid Statistics</Nav.Link>
+                <Nav.Link eventKey="browseLookBackApi" onSelect={this.handleLeftMenu}>Browse Learning</Nav.Link>
                 <Nav.Link eventKey="disabled" onSelect={this.handleLeftMenu} disabled>
                   Helpline #
                </Nav.Link>

@@ -19,11 +19,10 @@ class App extends Component
       covid19statsres:null
     }
   }
-  callBackToLoadDataSelFromLeftMenu = (dataResponse) => {
+  callBackToLoadDataSelFromLeftMenu = (pageId) => {
     this.setState({
-      covid19statsres:dataResponse
+      pageIdToShow:pageId
     });
-    console.log(dataResponse);
   }
 
   render(){
@@ -36,11 +35,11 @@ class App extends Component
         <Container>
           <Row>
             <Col xs={2}>
-              <LeftMenu callBackDataFromSelMenu={this.callBackToLoadDataSelFromLeftMenu}/>
+              <LeftMenu callBackDataFromSelMenu={this.callBackToLoadDataSelFromLeftMenu}  />
             </Col>
             <Col>
             <Switch>
-            <Home covid19Data={this.state.covid19statsres}/>
+            <Home pageIdToShow={this.state.pageIdToShow}/>
             <Route exact path="/latest" component={LatestUpdate}/>
           </Switch>
           </Col>
