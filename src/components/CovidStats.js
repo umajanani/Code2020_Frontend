@@ -22,7 +22,7 @@ export default class CovidStats extends Component{
     render() {
         return(
             <div>
-            <h2>Covid india stats</h2>
+            <h2>Covid India Stats</h2>
             <Table striped bordered hover>
                 <thead>
                     <tr>
@@ -41,7 +41,7 @@ export default class CovidStats extends Component{
                     </tr>
                 </tbody>
                 </Table>
-                <h2>covid regional stats</h2>
+                <h2>Covid Regional Stats</h2>
                 <Table striped bordered hover>
                 <thead>
                     <tr>

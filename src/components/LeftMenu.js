@@ -22,10 +22,10 @@ constructor(props)    {
 
 render()  { 
     return <Nav defaultActiveKey="/home" variant="pills" className="flex-column">
-                <Nav.Link eventKey="disabled" onSelect={this.handleLeftMenu} disabled>Covid awareness</Nav.Link>
-                <Nav.Link eventKey="disabled" onSelect={this.handleLeftMenu} disabled>Covid Preparedness</Nav.Link>
                 <Nav.Link eventKey="stats" onSelect={this.handleLeftMenu}>Covid Statistics</Nav.Link>
-                <Nav.Link eventKey="browseLookBackApi" onSelect={this.handleLeftMenu}>Browse Learning</Nav.Link>
+                <Nav.Link eventKey="browseLookBackApi" onSelect={this.handleLeftMenu}>Remote Learning</Nav.Link>
+                <Nav.Link eventKey="disabled" onSelect={this.handleLeftMenu} disabled>Covid awareness</Nav.Link>
+                <Nav.Link eventKey="disabled" onSelect={this.handleLeftMenu} disabled>Location Updates</Nav.Link>
                 <Nav.Link eventKey="disabled" onSelect={this.handleLeftMenu} disabled>
                   Helpline #
                </Nav.Link>
