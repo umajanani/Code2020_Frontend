@@ -30,7 +30,7 @@ export default class BrowseLearning extends Component {
             {this.state.learningcategories?.map(indlCategory => (
               <tr>
                 <td>{indlCategory.category}</td>
-                <td>{indlCategory.categoryname}</td>
+                <td><a href={indlCategory.url} target="_blank">{indlCategory.categoryname}</a></td>
                 </tr>
                 ))}
             </tbody>
