@@ -3,6 +3,7 @@ import { BrowserRouter as Router,Route,Switch} from 'react-router-dom'
 
 import { Navigation, NavigationBar } from './components/NavigationBar'
 import  Home from './Home'
+import Login from './Login'
 import { LatestUpdate } from './LatestUpdate'
 import { Layout } from './components/Layout'
 import { JumbotronPage } from './components/JumbotronPage'

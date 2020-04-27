@@ -6,8 +6,10 @@ export default class RightMenuHolder extends Component{
     }
 
     render() {
-     (
-         <div>dummy page</div>
-     )
+     
+
+        return <img src="logo512.png"/>
+         
+     
     }
 }

@@ -8,7 +8,7 @@ export const JumbotronPage = () => { return (
             One stop solution to can get all the information and updates during Crisis
           </p>
           <p>
-            <Button variant="primary">Learn more</Button>
+            <Button variant="primary" align="right" href="http://localhost:8081/index.html">VR Experience View</Button>
           </p>
     </Jumbotron>
 )}

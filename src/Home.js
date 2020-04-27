@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import CovidStats from './components/CovidStats'
 import BrowseLearning from './components/BrowseLearning'
 import LocationUpdates from './components/LocationUpdates'
-
+import Login from './Login'
 export default class Home extends Component{
 
     constructor(props){
